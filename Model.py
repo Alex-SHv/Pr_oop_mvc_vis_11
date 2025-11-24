@@ -1,12 +1,12 @@
-import random
+﻿import random
 
 class HangmanModel:
     def __init__(self):
-        self.words = ["laptop", "tablet", "calculator", "smatrphone"]
+        self.words = ["компьютер", "телефон", "машина", "программа", "карандаш", "дерево"]
         self.max_errors = 6
-        self.reset()
+        self.reset_game()
 
-    def reset(self):
+    def reset_game(self):
         self.word = random.choice(self.words)
         self.guessed = ["_"] * len(self.word)
         self.errors = 0
